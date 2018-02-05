@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<title>Slideshow test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<body>
+
+<h2 class="w3-center">Manual Slideshow</h2>
+
+<div class="w3-content">
+  <div class="mySlides w3-container w3-xlarge w3-blue w3-card-4">
+    <h1><b>Did You Know?</b></h1>
+    <h1><i>We plan to sell trips to the moon in the 2020s</i></h1>
+  </div>
+
+  <div class="mySlides w3-container w3-xlarge w3-red w3-card-4">
+	<p><span class="w3-tag w3-yellow">New!</span></p>
+    <p>6 Crystal Glasses</p>
+    <p>Only $99 !!!</p>
+  </div>
+  
+  <div class="mySlides w3-container w3-xlarge w3-yellow w3-card-4">
+    <h1><b>Did You Know?</b></h1>
+    <h1><i>We plan to sell trips to the moon in the 2020s</i></h1>
+  </div>
+
+  <div class="mySlides w3-container w3-xlarge w3-green w3-card-4">
+    <p><span class="w3-tag w3-yellow">New!</span></p>
+    <p>6 Crystal Glasses</p>
+    <p>Only $99 !!!</p>
+  </div>
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  
+</div>
+<div class="w3-center">
+  <button class="w3-badge demo w3-border w3-blue" onclick="currentDiv(1)"></button> 
+  <button class="w3-badge demo w3-border w3-red" onclick="currentDiv(2)"></button> 
+  <button class="w3-badge demo w3-border w3-yellow" onclick="currentDiv(3)"></button>
+  <button class="w3-badge demo w3-border w3-green" onclick="currentDiv(3)"></button> 
+</div>
+
+
+
+
+<script>
+var slideIndex = 0;
+showDivs(slideIndex);
+carousel();
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    x[slideIndex-1].style.display = "block"; 
+}
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 4000); // Skifter slide hver 4 sekund
+}
+</script>
+
+</body>
+</html>
