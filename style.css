@@ -16,13 +16,17 @@
 .overskrift {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
-	font-size: 20px;
+	font-size: 35px;
 	margin-bottom: 0;
 
 }
 
 .overskrift2 {
-	line-height: .3em;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	margin-bottom: 0;
+	line-height: .2em;
 }
 
 .rubrik {
@@ -81,24 +85,26 @@
 footer {
 	width: 100%;
 	bottom: 0;
+	margin: 0;
+	background-color: red;
+	margin-top: 3em;
 }
 
-footer div {
-	width: 20%;
-	float: left;
-	text-align: center;
-
-	
+.footer {
+	width: 80%;
+	margin: 0 10%;
 	height: 10em;
+}
+
+.footer div {
+	float: left;
+	width: 20%;
+	height: 10em;
+	text-align: center;
+	line-height: .5em;
 }
 
 footer img {
 	padding: 1em;
 	max-height: 5em;
-}
-
-.footer {
-	width: 80%;
-	background-color: #B1DE17;
-	padding: 1em 10%;
 }
