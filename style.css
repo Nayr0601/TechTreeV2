@@ -1,8 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
 
+/********************* Emne lister ***************************/
+.liste {
+	margin: 0 20%;
+}
 
 
+
+/*********************** Artikler ****************************/
 .artikel {
 	margin: 0 25%;
 }
@@ -10,12 +16,31 @@
 .overskrift {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
+	font-size: 20px;
+	margin-bottom: 0;
+
+}
+
+.overskrift2 {
+	line-height: .3em;
+}
+
+.rubrik {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 16px;
 }
 
 .underrubrik {
 	font-family: 'Open Sans', sans-serif;
 	font-style: italic;
 	font-weight: 1000;
+	font-size: 16px;
+}
+
+.underrubrik2 {
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic;
 	font-size: 16px;
 }
 
@@ -39,4 +64,41 @@
 	margin: 0 0 0 2%;
 	width: 40%;
 	float: right;
+}
+
+.billedv {
+	margin: 0 0 0 2%;
+	width: 40%;
+	float: left;
+}
+
+.billedm {
+	margin: 0 0 0 0;
+	width: 100%;
+}
+
+/*********************************** Footer **************************************/
+footer {
+	width: 100%;
+	bottom: 0;
+}
+
+footer div {
+	width: 20%;
+	float: left;
+	text-align: center;
+
+	
+	height: 10em;
+}
+
+footer img {
+	padding: 1em;
+	max-height: 5em;
+}
+
+.footer {
+	width: 80%;
+	background-color: #B1DE17;
+	padding: 1em 10%;
 }
